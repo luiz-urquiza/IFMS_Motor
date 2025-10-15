@@ -41,9 +41,9 @@ void setup() {
 }
 
 void loop() { // run over and over
-  String state;
+  char state;
   if (mySerial.available()) {
-    state = mySerial.readString();
+    state = mySerial.read();
   }
 
   Serial.print("State: ");
@@ -55,8 +55,6 @@ void loop() { // run over and over
   else{
     digitalWrite(13, LOW);
   }
-
-
 
   delay(500);
 }
